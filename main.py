@@ -15,7 +15,7 @@ def googlesearch(text):
 def searchloop_sanfoundry(link,searchtext,count=0):
     if("https://www.sanfoundry.com/" in link):
         try:
-            file1 = open("C:\\Users\\Krishna\\sanfoundry.txt", "w+")
+            file1 = open("C:\\Users\\Krishna\\sanfoundry.txt", "w+")    #chnage file location
             response = requests.get(link)
             bs = BeautifulSoup(response.content, "html.parser")
             data = bs.find("div", {"class": "entry-content"})
@@ -30,7 +30,7 @@ def searchloop_sanfoundry(link,searchtext,count=0):
             for lin in next_pre:
                 num.append(lin["href"])
             find = "find"
-            location = "C:\\Users\\Krishna\\sanfoundry.txt"
+            location = "C:\\Users\\Krishna\\sanfoundry.txt"            #change file location same as above
             res = os.system(find + ' "' + searchtext + '" ' + location)
             if (res == 0):
                 webbrowser.open(link, new=2)
@@ -49,7 +49,7 @@ def searchloop_sanfoundry(link,searchtext,count=0):
 def searchloop_examradar(link,searchtext,count=0):
     if("http://examradar.com/" in link):
         try:
-            file2 = open("C:\\Users\\Krishna\\examradar.txt", "w+")
+            file2 = open("C:\\Users\\Krishna\\examradar.txt", "w+")           #chnage file location
             response = requests.get(link)
             bs = BeautifulSoup(response.content, "html.parser")
             data = bs.find("div", {"class": "entry-content clearfix"})
@@ -65,7 +65,7 @@ def searchloop_examradar(link,searchtext,count=0):
             for links in links_next:
                 next_link = (links["href"])
             find = "find"
-            location = "C:\\Users\\Krishna\\examradar.txt"
+            location = "C:\\Users\\Krishna\\examradar.txt"                     #change file location same as above
             res = os.system(find + ' "' + searchtext + '" ' + location)
             if (res == 0):
                 webbrowser.open(link, new=2)
@@ -84,7 +84,7 @@ def searchloop_smartvidya(link,searchtext,count=0):
     if("http://www.smartvidya.co.in/" in link):
         try:
 
-            file3 = open("C:\\Users\\Krishna\\search.txt", "w+")
+            file3 = open("C:\\Users\\Krishna\\search.txt", "w+")               #chnage file location
             response = requests.get(link)
             bs = BeautifulSoup(response.content, "html.parser")
             data = bs.find("div", {"class": "post-body entry-content"})
@@ -100,7 +100,7 @@ def searchloop_smartvidya(link,searchtext,count=0):
             for links in links_next:
                 next_link = (links["href"])
             find = "find"
-            location = "C:\\Users\\Krishna\\search.txt"
+            location = "C:\\Users\\Krishna\\search.txt"            #change file location same as above
             res = os.system(find + ' "' + searchtext + '" ' + location)
             if (res == 0):
                 webbrowser.open(link, new=2)
@@ -120,7 +120,7 @@ def searchloop_smartvidya(link,searchtext,count=0):
 def searchloop_examveda(link,searchtext):
     if("https://www.examveda.com/" in link):
         try:
-            file4 = open("C:\\Users\\Krishna\\examveda.txt", "w+")
+            file4 = open("C:\\Users\\Krishna\\examveda.txt", "w+")                   #chnage file location
             response = requests.get(link)
             bs = BeautifulSoup(response.content, "html.parser")
             data = bs.find("div", {"class": "col-md-8"})
@@ -129,7 +129,7 @@ def searchloop_examveda(link,searchtext):
             file4.close()
 
             find = "find"
-            location = "C:\\Users\\Krishna\\examveda.txt"
+            location = "C:\\Users\\Krishna\\examveda.txt"           #change file location same as above
             res = os.system(find + ' "' + searchtext + '" ' + location)
             if (res == 0):
                 webbrowser.open(link, new=2)
