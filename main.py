@@ -1,3 +1,9 @@
+#first import libraries
+#google
+#beautyfulsoup4
+#urllib3
+
+
 from googlesearch import search
 import requests
 from bs4 import BeautifulSoup
